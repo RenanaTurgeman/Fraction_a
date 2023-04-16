@@ -11,20 +11,18 @@ namespace ariel{
         return Fraction(1,1);
     }
 
-    Fraction Fraction::operator+(const int num) const{
+    Fraction Fraction::operator+(const float num) const{
         return Fraction(1,1);
     }
-
-    Fraction Fraction::operator+(const double num) const{
-        return Fraction(1,1);
-    }
-
+    // Fraction Fraction::operator+(const float num, const Fraction& other){
+    //     return Fraction(1,1);
+    // }
     
 
     Fraction Fraction::operator-(const Fraction& other) const{
         return Fraction(1,1);
     }
-     Fraction Fraction::operator-(const int num) const{
+     Fraction Fraction::operator-(const float num) const{
         return Fraction(1,1);
     }
     Fraction Fraction::operator-(const double num) const{
@@ -35,21 +33,21 @@ namespace ariel{
     Fraction Fraction::operator*(const Fraction& other) const{
         return Fraction(1,1);
     }
-    Fraction Fraction::operator*(const int num) const{
+    Fraction Fraction::operator*(const float num) const{
         return Fraction(1,1);
     }
-    Fraction Fraction::operator*(const double num) const{
-        return Fraction(1,1);
-    }
+    // Fraction Fraction::operator*(const float num, const Fraction& other) {
+    //     return Fraction(1,1);
+    // }
 
 
     Fraction Fraction::operator/(const Fraction& other) const{
         return Fraction(1,1);
     }
-    Fraction Fraction::operator/(const int num) const{
+    Fraction Fraction::operator/(const float num) const{
         return Fraction(1,1);
     }
-    Fraction Fraction::operator/(const double num) const{
+    Fraction Fraction::operator/(const float num, const Fraction& other) {
         return Fraction(1,1);
     }
 
@@ -57,7 +55,7 @@ namespace ariel{
     bool Fraction::operator==(const Fraction& other) const{
         return true;
     }
-    bool Fraction::operator==(const int num) const{
+    bool Fraction::operator==(const float num) const{
         return true;
     }
     bool Fraction::operator==(const double num) const{
@@ -68,7 +66,7 @@ namespace ariel{
     bool Fraction::operator>(const Fraction& other) const{
         return true;
     }
-    bool Fraction::operator>(const int num) const{
+    bool Fraction::operator>(const float num) const{
         return true;
     }
     bool Fraction::operator>(const double num) const{
@@ -79,7 +77,7 @@ namespace ariel{
     bool Fraction::operator<(const Fraction& other) const{
         return true;
     }
-    bool Fraction::operator<(const int num) const{
+    bool Fraction::operator<(const float num) const{
         return true;
     }
     bool Fraction::operator<(const double num) const{
@@ -91,7 +89,7 @@ namespace ariel{
     bool Fraction::operator>=(const Fraction& other) const{
         return true;
     }
-    bool Fraction::operator>=(const int num) const{
+    bool Fraction::operator>=(const float num) const{
         return true;
     }
     bool Fraction::operator>=(const double num) const{
@@ -102,7 +100,7 @@ namespace ariel{
     bool Fraction::operator<=(const Fraction& other) const{
         return true;
     }
-    bool Fraction::operator<=(const int num) const{
+    bool Fraction::operator<=(const float num) const{
         return true;
     }
     bool Fraction::operator<=(const double num) const{

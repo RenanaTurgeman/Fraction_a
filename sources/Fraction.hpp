@@ -16,40 +16,42 @@ class Fraction {
         ~Fraction();
         // Overloaded operators
         Fraction operator+(const Fraction& other) const;
-        Fraction operator+(const int num) const;
-        Fraction operator+(const double num) const;
+        Fraction operator+(const float num) const;
+        friend Fraction operator+(const float num, const Fraction& other);
 
         Fraction operator-(const Fraction& other) const;
-        Fraction operator-(const int num) const;
+        Fraction operator-(const float num) const;
         Fraction operator-(const double num) const;
 
         Fraction operator*(const Fraction& other) const;
-        Fraction operator*(const int num) const;
-        Fraction operator*(const double num) const;
+        Fraction operator*(const float num) const;
+        friend Fraction operator*(const float num, const Fraction& other){
+            return Fraction(1,1);
+        }
 
         Fraction operator/(const Fraction& other) const;
-        Fraction operator/(const int num) const;
+        Fraction operator/(const float num) const;
         Fraction operator/(const double num) const;
 
         bool operator==(const Fraction& other) const;
-        bool operator==(const int num) const;
+        bool operator==(const float num) const;
         bool operator==(const double num) const;
 
         
         bool operator>(const Fraction& other) const;
-        bool operator>(const int num) const;
+        bool operator>(const float num) const;
         bool operator>(const double num) const;
 
         bool operator<(const Fraction& other) const;
-        bool operator<(const int num) const;
+        bool operator<(const float num) const;
         bool operator<(const double num) const;
 
         bool operator>=(const Fraction& other) const;
-        bool operator>=(const int num) const;
+        bool operator>=(const float num) const;
         bool operator>=(const double num) const;
 
         bool operator<=(const Fraction& other) const;
-        bool operator<=(const int num) const;
+        bool operator<=(const float num) const;
         bool operator<=(const double num) const;
 
         Fraction& operator++(); // prefix increment
