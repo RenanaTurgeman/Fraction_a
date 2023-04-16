@@ -11,35 +11,101 @@ namespace ariel{
         return Fraction(1,1);
     }
 
+    Fraction Fraction::operator+(const int num) const{
+        return Fraction(1,1);
+    }
+
+    Fraction Fraction::operator+(const double num) const{
+        return Fraction(1,1);
+    }
+
+    
+
     Fraction Fraction::operator-(const Fraction& other) const{
         return Fraction(1,1);
     }
+     Fraction Fraction::operator-(const int num) const{
+        return Fraction(1,1);
+    }
+    Fraction Fraction::operator-(const double num) const{
+        return Fraction(1,1);
+    }
+
 
     Fraction Fraction::operator*(const Fraction& other) const{
         return Fraction(1,1);
     }
+    Fraction Fraction::operator*(const int num) const{
+        return Fraction(1,1);
+    }
+    Fraction Fraction::operator*(const double num) const{
+        return Fraction(1,1);
+    }
+
 
     Fraction Fraction::operator/(const Fraction& other) const{
         return Fraction(1,1);
     }
+    Fraction Fraction::operator/(const int num) const{
+        return Fraction(1,1);
+    }
+    Fraction Fraction::operator/(const double num) const{
+        return Fraction(1,1);
+    }
+
 
     bool Fraction::operator==(const Fraction& other) const{
         return true;
     }
+    bool Fraction::operator==(const int num) const{
+        return true;
+    }
+    bool Fraction::operator==(const double num) const{
+        return true;
+    }
+
 
     bool Fraction::operator>(const Fraction& other) const{
         return true;
     }
+    bool Fraction::operator>(const int num) const{
+        return true;
+    }
+    bool Fraction::operator>(const double num) const{
+        return true;
+    }
+
 
     bool Fraction::operator<(const Fraction& other) const{
         return true;
     }
+    bool Fraction::operator<(const int num) const{
+        return true;
+    }
+    bool Fraction::operator<(const double num) const{
+        return true;
+    }
+
+
 
     bool Fraction::operator>=(const Fraction& other) const{
         return true;
     }
+    bool Fraction::operator>=(const int num) const{
+        return true;
+    }
+    bool Fraction::operator>=(const double num) const{
+        return true;
+    }
+
 
     bool Fraction::operator<=(const Fraction& other) const{
+        return true;
+    }
+    bool Fraction::operator<=(const int num) const{
+        return true;
+    }
+    bool Fraction::operator<=(const double num) const{
         return true;
     }
 
@@ -60,7 +126,8 @@ namespace ariel{
     }
 
     // std::ostream& Fraction::operator<<(std::ostream& os, const Fraction& f){
-    //     return os;
+    //     os << f.numerator <<'/' << f.denominator;
+    //     return os;    
     // }
 
     // std::istream& Fraction::operator>>(std::istream& is, Fraction& f){

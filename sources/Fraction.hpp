@@ -13,16 +13,45 @@ class Fraction {
         // Constructors
         Fraction(int num = 0, int den = 1) : numerator(num), denominator(den) {}
         Fraction(float f);
+        ~Fraction();
         // Overloaded operators
         Fraction operator+(const Fraction& other) const;
+        Fraction operator+(const int num) const;
+        Fraction operator+(const double num) const;
+
         Fraction operator-(const Fraction& other) const;
+        Fraction operator-(const int num) const;
+        Fraction operator-(const double num) const;
+
         Fraction operator*(const Fraction& other) const;
+        Fraction operator*(const int num) const;
+        Fraction operator*(const double num) const;
+
         Fraction operator/(const Fraction& other) const;
+        Fraction operator/(const int num) const;
+        Fraction operator/(const double num) const;
+
         bool operator==(const Fraction& other) const;
+        bool operator==(const int num) const;
+        bool operator==(const double num) const;
+
+        
         bool operator>(const Fraction& other) const;
+        bool operator>(const int num) const;
+        bool operator>(const double num) const;
+
         bool operator<(const Fraction& other) const;
+        bool operator<(const int num) const;
+        bool operator<(const double num) const;
+
         bool operator>=(const Fraction& other) const;
+        bool operator>=(const int num) const;
+        bool operator>=(const double num) const;
+
         bool operator<=(const Fraction& other) const;
+        bool operator<=(const int num) const;
+        bool operator<=(const double num) const;
+
         Fraction& operator++(); // prefix increment
         const Fraction operator++(int); // postfix increment
         Fraction& operator--(); // prefix decrement
