@@ -2,7 +2,6 @@
 #define FRACTION_HPP
 
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 namespace ariel{
@@ -15,21 +14,21 @@ class Fraction {
         Fraction(int num = 0, int den = 1) : numerator(num), denominator(den) {}
         Fraction(float f);
         // Overloaded operators
-    Fraction operator+(const Fraction& other) const;
-    Fraction operator-(const Fraction& other) const;
-    Fraction operator*(const Fraction& other) const;
-    Fraction operator/(const Fraction& other) const;
-    bool operator==(const Fraction& other) const;
-    bool operator>(const Fraction& other) const;
-    bool operator<(const Fraction& other) const;
-    bool operator>=(const Fraction& other) const;
-    bool operator<=(const Fraction& other) const;
-    Fraction& operator++(); // prefix increment
-    const Fraction operator++(int); // postfix increment
-    Fraction& operator--(); // prefix decrement
-    const Fraction operator--(int); // postfix decrement
-    ostream& operator<<(ostream& os, const Fraction& f);
-    istream& operator>>(istream& is, Fraction& f);
+        Fraction operator+(const Fraction& other) const;
+        Fraction operator-(const Fraction& other) const;
+        Fraction operator*(const Fraction& other) const;
+        Fraction operator/(const Fraction& other) const;
+        bool operator==(const Fraction& other) const;
+        bool operator>(const Fraction& other) const;
+        bool operator<(const Fraction& other) const;
+        bool operator>=(const Fraction& other) const;
+        bool operator<=(const Fraction& other) const;
+        Fraction& operator++(); // prefix increment
+        const Fraction operator++(int); // postfix increment
+        Fraction& operator--(); // prefix decrement
+        const Fraction operator--(int); // postfix decrement
+        friend ostream& operator<<(ostream& os, const Fraction& f);
+        friend istream& operator>>(istream& is, Fraction& f);
 
 
 };
