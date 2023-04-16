@@ -27,8 +27,8 @@ class Fraction {
         const Fraction operator++(int); // postfix increment
         Fraction& operator--(); // prefix decrement
         const Fraction operator--(int); // postfix decrement
-        friend ostream& operator<<(ostream& os, const Fraction& f);
-        friend istream& operator>>(istream& is, Fraction& f);
+        friend std::ostream& operator<<(std::ostream& os, const Fraction& f);
+        friend std::istream& operator>>(std::istream& is, Fraction& f);
 
 
 };

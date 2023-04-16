@@ -59,11 +59,11 @@ namespace ariel{
         return Fraction(1,1);
     }
 
-    ostream& Fraction::operator<<(ostream& os, const Fraction& f){
-        return os;
-    }
+    // std::ostream& Fraction::operator<<(std::ostream& os, const Fraction& f){
+    //     return os;
+    // }
 
-    istream& Fraction::operator>>(istream& is, Fraction& f){
-        return is;
-    }
+    // std::istream& Fraction::operator>>(std::istream& is, Fraction& f){
+    //     return is;
+    // }
 }
