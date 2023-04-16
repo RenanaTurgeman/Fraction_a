@@ -117,11 +117,11 @@ namespace ariel{
         return Fraction(1,1);
     }
 
-    Fraction& Fraction::operator--(){ // prefix increment
+    Fraction& Fraction::operator--(){ // prefix decrement
         return *this;
     }
 
-    const Fraction Fraction::operator--(int){ // postfix increment
+    const Fraction Fraction::operator--(int){ // postfix decrement
         return Fraction(1,1);
     }
 

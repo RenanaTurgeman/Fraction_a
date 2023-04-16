@@ -36,3 +36,43 @@ TEST_CASE("Arithmetic test"){
     CHECK((f1/f2)==Fraction(2,3));
     CHECK((f2/f3)==Fraction(9,2));
 }
+
+TEST_CASE("Equality test"){
+    Fraction f1(1,2);
+    Fraction f2(3,4);
+    Fraction f3(3,4);
+
+    //check > < >= <= == functions
+    CHECK((f1<f2)==true);
+    CHECK((f1>f2)==false);
+
+    CHECK((f1<=f2)==true);
+    CHECK((f3<=f2)==true);
+    CHECK((f1>=f2)==false);
+    CHECK((f1<=f2)==true);
+
+    CHECK((f1==f2)==false);
+    CHECK((f1==f1)==true);
+    CHECK((f2==f3)==true);
+    //check if need != too
+}
+
+TEST_CASE("prefix and postfix increment"){
+    Fraction f1(1,2);
+
+    CHECK((++f1)==Fraction(3,2)); //first add , second return
+    CHECK((f1++)==Fraction(3,2)); //first return, after add
+    CHECK((f1)==Fraction(5,2)); //check if increment after return
+}
+
+TEST_CASE("prefix and postfix decrement"){
+    Fraction f1(3,2);
+
+    CHECK((--f1)==Fraction(1,2)); //first sub , second return
+    CHECK((f1--)==Fraction(1,2)); //first return, after sub
+    CHECK((f1)==Fraction(-1,2)); //check if decrement after return
+}
+
+TEST_CASE(""){
+    
+}
