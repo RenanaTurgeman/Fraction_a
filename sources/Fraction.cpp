@@ -1,109 +1,48 @@
 #include "Fraction.hpp"
- 
+ using namespace std;
+
 namespace ariel{
     
-    Fraction::Fraction(float f){
+    // Fraction::Fraction(float f){
 
-    }
+    // }
 
     // Overloaded operators
-    Fraction Fraction::operator+(const Fraction& other) const{
+    Fraction operator+(const Fraction& num1, const Fraction& num2){
         return Fraction(1,1);
     }
 
-    Fraction Fraction::operator+(const float num) const{
-        return Fraction(1,1);
+    Fraction operator-(const Fraction& num1, const Fraction& num2){
+         return Fraction(1,1);
     }
-    // Fraction Fraction::operator+(const float num, const Fraction& other){
-    //     return Fraction(1,1);
-    // }
-    
-
-    Fraction Fraction::operator-(const Fraction& other) const{
-        return Fraction(1,1);
-    }
-     Fraction Fraction::operator-(const float num) const{
-        return Fraction(1,1);
-    }
-    Fraction Fraction::operator-(const double num) const{
-        return Fraction(1,1);
-    }
-
-
-    Fraction Fraction::operator*(const Fraction& other) const{
-        return Fraction(1,1);
-    }
-    Fraction Fraction::operator*(const float num) const{
-        return Fraction(1,1);
-    }
-    // Fraction Fraction::operator*(const float num, const Fraction& other) {
+    // Fraction operator-(const Fraction& num1, const Fraction& num2){
     //     return Fraction(1,1);
     // }
 
-
-    Fraction Fraction::operator/(const Fraction& other) const{
-        return Fraction(1,1);
-    }
-    Fraction Fraction::operator/(const float num) const{
-        return Fraction(1,1);
-    }
-    Fraction Fraction::operator/(const float num, const Fraction& other) {
+    Fraction operator*(const Fraction& num1, const Fraction& num2){
         return Fraction(1,1);
     }
 
-
-    bool Fraction::operator==(const Fraction& other) const{
-        return true;
-    }
-    bool Fraction::operator==(const float num) const{
-        return true;
-    }
-    bool Fraction::operator==(const double num) const{
-        return true;
+    Fraction operator/(const Fraction& num1, const Fraction& num2) {
+        return Fraction(1,1);
     }
 
-
-    bool Fraction::operator>(const Fraction& other) const{
+    bool operator==(const Fraction& num1, const Fraction& num2){
         return true;
     }
-    bool Fraction::operator>(const float num) const{
-        return true;
-    }
-    bool Fraction::operator>(const double num) const{
+    bool operator>(const Fraction& num1, const Fraction& num2){
         return true;
     }
 
-
-    bool Fraction::operator<(const Fraction& other) const{
-        return true;
-    }
-    bool Fraction::operator<(const float num) const{
-        return true;
-    }
-    bool Fraction::operator<(const double num) const{
+    bool operator<(const Fraction& num1, const Fraction& num2){
         return true;
     }
 
-
-
-    bool Fraction::operator>=(const Fraction& other) const{
-        return true;
-    }
-    bool Fraction::operator>=(const float num) const{
-        return true;
-    }
-    bool Fraction::operator>=(const double num) const{
+    bool operator>=(const Fraction& num1, const Fraction& num2){
         return true;
     }
 
-
-    bool Fraction::operator<=(const Fraction& other) const{
-        return true;
-    }
-    bool Fraction::operator<=(const float num) const{
-        return true;
-    }
-    bool Fraction::operator<=(const double num) const{
+    bool operator<=(const Fraction& num1, const Fraction& num2){
         return true;
     }
 
@@ -123,12 +62,24 @@ namespace ariel{
         return Fraction(1,1);
     }
 
-    // std::ostream& Fraction::operator<<(std::ostream& os, const Fraction& f){
-    //     os << f.numerator <<'/' << f.denominator;
-    //     return os;    
-    // }
+    std::ostream& operator<<(std::ostream& os, const Fraction& f){
+        os << f.numerator <<'/' << f.denominator;
+        return os;    
+    }
 
-    // std::istream& Fraction::operator>>(std::istream& is, Fraction& f){
-    //     return is;
-    // }
+    std::istream& operator>>(std::istream& is, Fraction& f){
+        return is;
+    }
+
+    long long Fraction::gcd(long long a, long long b){
+        if (a == 0)
+            return b;
+        else if (b == 0)
+            return a;
+        if (a < b)
+            return gcd(a, b % a);
+        else
+            return gcd(b, a % b);
+    }
+ 
 }
