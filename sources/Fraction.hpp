@@ -43,7 +43,7 @@ class Fraction {
             numerator=(intVal * deno) + num;
             denominator= deno;
         }
-        ~Fraction();
+        // ~Fraction();
         // Overloaded operators
         friend Fraction operator+(const Fraction& num1, const Fraction& num2);
         friend Fraction operator-(const Fraction& num1, const Fraction& num2);
@@ -61,8 +61,6 @@ class Fraction {
         const Fraction operator--(int); // postfix decrement
         friend std::ostream& operator<<(std::ostream& os, const Fraction& f);
         friend std::istream& operator>>(std::istream& is, Fraction& f);
-
-
 };
 
 };

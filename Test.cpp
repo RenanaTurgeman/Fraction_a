@@ -37,6 +37,25 @@ TEST_CASE("Arithmetic test"){
     CHECK((f2/f3)==Fraction(9,2));
 }
 
+TEST_CASE("Arithmetic worng test "){
+    Fraction f1(1,2);
+    Fraction f2(3,4);
+    Fraction f3(1,6);
+
+    //check + - * / functions
+    CHECK_FALSE((f1+f2)==f3);
+    CHECK_FALSE((f2+f3)==f1);
+
+    CHECK_FALSE((f2-f1)==f3);
+    CHECK_FALSE((f2-f3)==f1);
+
+    CHECK_FALSE((f1*f2)==f3);
+    CHECK_FALSE((f3*f3)==f3);
+
+    CHECK_FALSE((f2/f1)==f3);
+    CHECK_FALSE((f3/f2)==f1);
+}
+
 TEST_CASE("Equality test"){
     Fraction f1(1,2);
     Fraction f2(3,4);
@@ -73,6 +92,16 @@ TEST_CASE("prefix and postfix decrement"){
     CHECK((f1)==Fraction(-1,2)); //check if decrement after return
 }
 
-TEST_CASE(""){
+TEST_CASE("Distributive commutativitive checks"){
+    Fraction f1(1,2);
+    Fraction f2(3,4);
+    Fraction f3(3,4);
+
+    CHECK((f1+f2) == (f2+f1));
+    CHECK((f1*f2)==(f2*f1));
+
+    CHECK((f1+f2)+f3==f1+(f2+f3));
+    CHECK((f1*f2)*f3==f1*(f2*f3));
     
+    CHECK((f1*(f2+f3))==(f1*f2)+(f1*f3));
 }
