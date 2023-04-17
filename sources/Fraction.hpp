@@ -43,13 +43,14 @@ class Fraction {
             numerator=(intVal * deno) + num;
             denominator= deno;
         }
-        // ~Fraction();
+        ~Fraction()= default;
         // Overloaded operators
         friend Fraction operator+(const Fraction& num1, const Fraction& num2);
         friend Fraction operator-(const Fraction& num1, const Fraction& num2);
         friend Fraction operator*(const Fraction& num1, const Fraction& num2);
         friend Fraction operator/(const Fraction& num1, const Fraction& num2);
         friend bool operator==(const Fraction& num1, const Fraction& num2);
+        friend bool operator!=(const Fraction& num1, const Fraction& num2);
         friend bool operator>(const Fraction& num1, const Fraction& num2);
         friend bool operator<(const Fraction& num1, const Fraction& num2);
         friend bool operator>=(const Fraction& num1, const Fraction& num2);

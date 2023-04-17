@@ -30,6 +30,9 @@ namespace ariel{
     bool operator==(const Fraction& num1, const Fraction& num2){
         return true;
     }
+    bool operator!=(const Fraction& num1, const Fraction& num2){
+        return true;
+    }
     bool operator>(const Fraction& num1, const Fraction& num2){
         return true;
     }
