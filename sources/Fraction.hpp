@@ -4,13 +4,14 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
+// using namespace std;
 
 namespace ariel{
 class Fraction {
     private:
-        int numerator;
+        int numerator; //above
         int denominator;
+        void reduce();
         // Recursive function to
     // return GCD of a and b
     long long gcd(long long a, long long b);
